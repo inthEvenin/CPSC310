@@ -11,3 +11,12 @@
     - Being able to trust that the repeatable process will run to its successful completion is crucial, although naturally test failures are sometimes to be expected and are not considered a build automation reliability failure.
   - **Revertible**: The build process should make it possible to quickly and transparently revert out of any change.
     - If a build is deployed and is found t o have an error in prodution, it should be possible to automatically rever to a prior build in a quick and transparent way.
+
+### Automateable units
+
+1. **Source** **control**: Every software team uses version control to track their source code resources (and other assets including any automation tools themselves).
+2. **Dependency** **management**: Code is not developed in isolation; all systems are built upon a host of existing libraries and frameworks. Dependency management solutions provide a means to reliably procure software required for the build process.
+3. **Build** **tools**: Compiling the code into shippable units (be they libraries or actual executables) is the next step. While these tasks are sometimes easy, they often involve many independent steps that are joined toegther by build tools.
+4. **Test tools**: Tests are code too, so enabiling them to be written with as little boilerplate code as possible is important for reducing the costs of automated testing. Many unit test tools in particular have been developed to help software engineers write tests and form them into coherent test suits quickly.
+5. **Test runners**: Once test suites have been developed they must be run in a repeatable way. While this can take place on the engineer's development machine, tests are often run on a common infrastructure to increase the consistency between test runs for all developers.
+6. **Deployment**: In the online realm, software must be deployed once it is built.
